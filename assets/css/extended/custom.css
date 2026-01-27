@@ -1,0 +1,38 @@
+/* Style the collapsible details box */
+details {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--code-bg); /* Matches your theme's code background */
+    border-left: 5px solid #444; /* This creates the line on the left */
+    border-radius: 4px;
+}
+
+/* Optional: Style the summary (the clickable title) */
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Center captions for the {{< figure >}} shortcode */
+figure {
+    text-align: center;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic; /* Optional: makes captions look more distinct */
+    margin-top: 8px;    /* Optional: adds space between image and text */
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the image and caption horizontally */
+    justify-content: center;
+    margin: 2rem auto;    /* Adds space above/below and centers the figure box */
+}
+
+figure img {
+    display: block;
+    margin: 0 auto;       /* The classic way to center a block-level image */
+}

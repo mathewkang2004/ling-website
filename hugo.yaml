@@ -1,0 +1,60 @@
+baseURL: "/"
+languageCode: "en-us"
+title: "Linguistic Indifference"
+theme: "hugo-PaperMod"
+
+# --- GLOBAL OUTPUTS ---
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# --- CRITICAL FOR TIMELINE ---
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# --- MENU SETTINGS ---
+menu:
+  main:
+    - identifier: search
+      name: "Search"
+      url: "/search/"
+      weight: 5   # This adds the icon/link to the top right
+    - identifier: timeline
+      name: "Timeline"
+      url: "/timeline/"
+      weight: 10
+    - identifier: updates
+      name: "Lab Notebook"
+      url: "/archives/"
+      weight: 20
+        
+# --- PAPERMOD SPECIFIC FEATURES ---        
+params:
+  env: production # Forces PaperMod to act like it's "Live"
+  mermaid: true
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+  # ... your other params ...
+  searchConfig:
+    enabled: true
+    url: "/search/"
+  mainSections: ["posts"]
+  hideHomePageList: true
+  disableHomeInfo: true

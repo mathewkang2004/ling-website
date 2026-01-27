@@ -1,0 +1,41 @@
+---
+title:
+author: R Build
+date: '2026-01-22'
+slug: timeline-and-progress
+categories:
+  - R
+  - rstudio
+tags:
+  - R Markdown
+---
+
+## Timeline
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+#Loading vistime and plotly
+library(vistime)
+library(plotly)
+
+timeline <- data.frame(
+  event = c("Recruitment planning", "Finish writing IRB protocol", "IRB submission", "Pilot testing", "Recruitment", "Data Collection", "Data Analysis", "Final Writeup", "April Symposium"),
+  start = c("2026-01-23", "2026-01-28", "2026-01-30", "2026-01-31", "2026-02-20", "2026-03-01", "2026-03-25", "2026-03-30", "2026-04-05"),
+  end = c("2026-01-24", "2026-01-29", "2026-01-30", "2026-02-06", "2026-02-28", "2026-03-24", "2026-03-29", "2026-04-04", "2026-04-05"),
+  group = c("Planning", "IRB", "IRB", "Testing", "Execution", "Execution", "Analysis", "Writing", "Symposium"),
+  color = c("#00a8e8", "#00a8e8", "#007ea7", "#003459", "#00171f", "#003459", "#007ea7", "#00a8e8", "#00171f")
+)
+
+#show_labels = FALSE removes text from the top of the bars
+#optimize_y = TRUE creates staircase effect
+vistime(timeline,
+        optimize_y = TRUE,
+        linewidth = 25,
+        show_labels = FALSE) %>%
+  layout(xaxis = list(
+    tickformat = "%b", # %b shows month name (Jan, Feb, etc.)
+    dtick = "M1", # M1 = jump by 1 month
+    tickmode = "linear", # Ensures jumps are consistent
+    tickfont = list(size = 14)
+  ))
+```
+
+

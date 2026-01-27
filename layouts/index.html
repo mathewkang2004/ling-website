@@ -1,0 +1,18 @@
+{{- define "main" -}}
+<article class="post-single">
+  <div class="post-content">
+    {{- .Content -}}
+  </div>
+</article>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true,
+    theme: 'dark',
+    themeVariables: {
+      backgroundColor: '#1d1e20' // This matches PaperMod's background
+    }
+  });
+</script>
+{{- end -}}
