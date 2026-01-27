@@ -1,0 +1,17 @@
+{{- define "main" -}}
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{- .Content -}}
+  </div>
+
+  <footer class="post-footer">
+    {{- if .Params.comments -}}
+      {{- partial "giscus.html" . -}}
+    {{- end -}}
+  </footer>
+</article>
+{{- end -}}

@@ -34,6 +34,19 @@ menu:
         
 # --- PAPERMOD SPECIFIC FEATURES ---        
 params:
+  comments: true
+  comments_giscus:
+    repo: "mathewkang2004/ling-website"
+    repo_id: "R_kgDORCm1RA"
+    category: "General"                  
+    category_id: "DIC_kwDORCm1RM4C1gP-"      
+    mapping: "pathname"
+    strict: "0"
+    reactions_enabled: "1"
+    emit_metadata: "0"
+    input_position: "bottom"
+    theme: "transparent_dark"
+    lang: "en"
   env: production # Forces PaperMod to act like it's "Live"
   mermaid: true
   defaultTheme: auto
@@ -46,7 +59,6 @@ params:
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
   disableSpecial1stPost: false
-  comments: false
   hidemeta: false
   hideSummary: false
   showtoc: true

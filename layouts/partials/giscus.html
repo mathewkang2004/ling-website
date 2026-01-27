@@ -1,0 +1,15 @@
+<div class="container giscus my-4">
+    <script src="https://giscus.app/client.js"
+        data-repo="{{ .Site.Params.comments_giscus.repo }}"
+        data-repo-id="{{ .Site.Params.comments_giscus.repo_id }}"
+        data-category="{{ .Site.Params.comments_giscus.category }}"
+        data-category-id="{{ .Site.Params.comments_giscus.category_id }}"
+        data-mapping="{{ .Site.Params.comments_giscus.mapping }}"
+        data-reactions-enabled="{{ .Site.Params.comments_giscus.reactions_enabled }}"
+        data-emit-metadata="{{ .Site.Params.comments_giscus.emit_metadata }}"
+        data-theme="{{ .Site.Params.comments_giscus.theme }}"
+        data-lang="{{ .Site.Params.comments_giscus.lang }}"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
