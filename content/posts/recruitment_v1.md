@@ -1,10 +1,11 @@
 ---
 title: "Brainstorming the Recruitment Plan"
 date: 2026-01-26T21:48:51-07:00
+layout: "single"
 # weight: 1
 author: ["Mathew Kang", "Umi Pak"]
 showToc: true
-TocOpen: false
+TocOpen: true
 draft: false
 hidemeta: false
 comments: true

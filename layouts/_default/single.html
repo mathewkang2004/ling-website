@@ -1,7 +1,24 @@
 {{- define "main" -}}
 <article class="post-single">
   <header class="post-header">
+    {{/* Breadcrumbs (The path to the post) */}}
+    {{- if .Site.Params.ShowBreadCrumbs -}}
+      {{- partial "breadcrumbs.html" . -}}
+    {{- end -}}
+
     <h1 class="post-title">{{ .Title }}</h1>
+
+    {{/* Post Meta (Date, Author, Reading Time) */}}
+    {{- if not .Params.hideMeta -}}
+      <div class="post-meta">
+        {{- partial "post_meta.html" . -}}
+      </div>
+    {{- end -}}
+
+    {{/* Table of Contents */}}
+    {{- if (.Param "ShowToc") -}}
+      {{- partial "toc.html" . -}}
+    {{- end -}}
   </header>
 
   <div class="post-content">
